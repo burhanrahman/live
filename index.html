@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Live Cricket Streaming on Desktop, iPhone and Android. Cricket on
+      Smartcric.Com.
+    </title>
+    <meta
+      name="DESCRIPTION"
+      content="Watch live cricket streaming on your Smartphone. Watch live cricket on Desktop, iPhone/iPad and Android. Live Cricket on iPhone, HTC, Samsung and other android based phones."
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap CDN -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JavaScript Bundle with Popper -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var isMobile = {
+        Android: function () {
+          return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+          return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+          return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+          return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+          return (
+            isMobile.Android() ||
+            isMobile.BlackBerry() ||
+            isMobile.iOS() ||
+            isMobile.Opera() ||
+            isMobile.Windows()
+          );
+        },
+      };
+
+      if (isMobile.any()) {
+        window.location = "https://smartcric.com";
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container py-2">
+        <div class="row">
+          <div class="col-md-6 m-auto py-2 text-center">
+            <img class="" src="img/logo.png" alt="Live Cricket Streaming" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <section class="live">
+      <div class="container">
+        <!-- card -->
+        <div class="card w-75 mx-auto mt-3 bg-light box">
+          <div class="card-body">
+            <!-- LIVE -->
+            <div class="row" align="center">
+              <div class="col-12">
+                <div class="live">
+                  <p>Live</p>
+                  <img class="img-fluid flag" src="img/icc.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- LIVE -->
+
+            <!-- team names and flags -->
+            <div class="row">
+              <div class="col-12 text-center">
+                <h3>ICC Twenty20 World Cup 2022</h3>
+              </div>
+            </div>
+            <!-- team names and flags -->
+
+            <!-- Days  -->
+            <!-- Match type -->
+            <div class="row">
+              <div class="col-12" align="center">
+                <div class="subtitle">
+                  <span>Twenty20 Tournament</span> - ICC Men's T20 World Cup
+                </div>
+              </div>
+            </div>
+            <!-- Match type -->
+
+            <!-- Button -->
+            <div class="row">
+              <div class="col-12 mt-2" align="center">
+                <a>
+                  <button
+                    class="btn watch-btn"
+                    button-data="1"
+                    onclick="match_1(this)"
+                    id="watch_1"
+                    data-bs-toggle="modal"
+                    data-bs-target="#match_1"
+                  >
+                    Click Here to Watch
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="match_1"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content match_content">
+          <div class="modal-body body_match_1">
+            <div id="ref_match_1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="match_2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content match_content">
+          <div class="modal-body body_match_2">
+            <div id="ref_match_2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="feedback"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body" style="overflow: hidden">
+            <iframe
+              src="https://cform.cyou/smartcric-com.php"
+              title="feedback"
+              scrolling="no"
+              style="
+                height: 670px;
+                border: 0px none;
+                width: 100%;
+                margin-top: -40px;
+              "
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="termsofservice"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-body">
+            <p align="center">
+              <font face="Verdana" style="font-size: 14pt"
+                ><b>Disclaimer</b></font
+              >
+            </p>
+
+            <p align="left">
+              <font face="Verdana"
+                >Smartcric.com does not host any content on its servers and has
+                no control over what media is put up or taken down.
+                Smartcric.com functions like any other search engine, such as
+                Google, and does not host, upload or manage any videos or
+                content. It crawls, aggregates, and displays links in a
+                convenient, user-friendly interface. Smartcric.com uses embedded
+                links for this purpose.</font
+              >
+            </p>
+            <p align="left">
+              <font face="Verdana"
+                >Embedded links are a link that uses anchor text to create a
+                link to another web page using the HTTP protocol.</font
+              >
+            </p>
+            <p align="left">
+              <font face="Verdana"
+                >Smartcric.com merely scrapes 3rd-party web pages that are
+                publicly accessible via any regular web browser. It is the
+                responsibility of the user to avoid any actions that might
+                violate the laws governing their locality. Please use
+                Smartcric.com at your own risk.
+              </font>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="mt-3 py-2">
+      <div class="container text-white">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>© 2022 Findsports.xyz - Some rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        var tp = window.innerHeight - 460;
+        $("main").css("marginTop", tp / 2 + "px");
+      });
+
+      $(window).resize(function () {
+        var tp = window.innerHeight - 460;
+        $("main").css("marginTop", tp / 2 + "px");
+      });
+
+      function match_1(obj) {
+        var id = $(obj).attr("button-data");
+        document.getElementById("ref_match_" + id).innerHTML =
+          "<iframe width=1140 height=525 scrolling=no frameborder=0 scrolling=no allowtransparency=true marginwidth='0' marginheight='0' src='https://www.lfplayer.cyou/hembedplayer/lizata1/1/1140/525' allowfullscreen ></iframe>";
+        document
+          .getElementById("match_" + id)
+          .addEventListener("hidden.bs.modal", function (event) {
+            $("#ref_match_" + id).empty();
+          });
+      }
+      function match_2(obj) {
+        var id = $(obj).attr("button-data");
+        document.getElementById("ref_match_" + id).innerHTML =
+          "<iframe width=1140 height=525 scrolling=no frameborder=0 scrolling=no allowtransparency=true marginwidth='0' marginheight='0' src='https://www.lfplayer.cyou/hembedplayer/hizata2/1/1140/525' allowfullscreen ></iframe>";
+        document
+          .getElementById("match_" + id)
+          .addEventListener("hidden.bs.modal", function (event) {
+            $("#ref_match_" + id).empty();
+          });
+      }
+    </script>
+  </body>
+</html>

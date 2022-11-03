@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.flag {
+  width: 90px;
+  padding-bottom: 15px;
+}
+header {
+  width: 100%;
+  background: #16a085;
+}
+header img {
+  width: 150px;
+}
+footer {
+  background: #16a085;
+  color: white;
+}
+footer p {
+  margin: 0;
+}
+.watch-btn {
+  background: #16a085;
+  color: white;
+}
